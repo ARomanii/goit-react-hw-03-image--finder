@@ -7,7 +7,6 @@ import Loader from "./Loader/Loader";
 import Modal from './modal/Modal';
 
 import styles from './App.module.css';
-/*import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';*/
 
 export default class App extends Component {
   state = {
