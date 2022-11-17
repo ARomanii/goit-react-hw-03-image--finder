@@ -36,6 +36,36 @@ export default class App extends Component {
     prevQuery !== nextQuery && this.fetchImages();
   }
 
+  /*fetchImages = () => {
+    const { searchQuery, page } = this.state;
+
+    this.setState({
+      loading: true,
+    });
+
+    imagesApi
+      .fetchImagesWithQuery(searchQuery, page)
+      .then(images => {
+        this.setState(prevState => ({
+          results: [...prevState.results, ...images],
+          page: prevState.page + 1,
+        }));
+        if (!this.state.firstFetch) {
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth',
+          });
+        }
+      })
+      .catch(error => console.log(error))
+      .finally(() => {
+        this.setState({
+          loading: false,
+          firstFetch: false,
+        });
+      });
+  };*/
+
   fetchImages = () => {
     const { searchQuery, page } = this.state;
 
